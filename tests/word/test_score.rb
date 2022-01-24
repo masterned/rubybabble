@@ -21,6 +21,7 @@ class Word::TestScore < Minitest::Test
     end
 
     def test_score_a_word_with_recurring_tiles
-
+        @word.tiles = [:H, :E, :L, :L, :O]
+        assert_equal 8, @word.score
     end
 end
