@@ -12,7 +12,10 @@ class TestAppend < Minitest::Test
     end
 
     def test_append_many_tiles
-
+        [:A, :I, :U, :E, :O].each do |tile|
+            @tile_group.append tile
+        end
+        assert_equal [:A, :I, :U, :E, :O], @tile_group.tiles
     end
 
     def test_append_duplicate_tiles
