@@ -17,6 +17,8 @@ class TileRack::TestHasTilesFor < Minitest::Test
     end
 
     def test_rack_doesnt_contain_any_needed_letters
+        @tile_rack.tiles = Array.new(7, :A)
+        assert !(@tile_rack.has_tiles_for? 'WORLD')
     end
 
     def test_rack_contains_some_but_not_all_needed_letters
