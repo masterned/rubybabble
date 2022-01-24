@@ -7,6 +7,7 @@ class TileGroup
     end
 
     def append tile
+        @tiles << tile
     end
 
     def remove tile
