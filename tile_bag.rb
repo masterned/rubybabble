@@ -68,7 +68,8 @@ class TileBag
   end
 
   def draw_tile
-    tiles.pop()
+    tiles.shuffle!
+    tiles.pop
   end
 
   def empty?
