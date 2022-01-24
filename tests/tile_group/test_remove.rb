@@ -7,7 +7,11 @@ class TileGroup::TestRemove < Minitest::Test
     end
 
     def test_remove_only_tile
+        @tile_group.tiles = [:A]
+        @tile_group.remove :A
 
+        assert_equal [], @tile_group.tiles
+        assert @tile_group.tiles.empty?
     end
 
     def test_remove_first_tile_from_many
