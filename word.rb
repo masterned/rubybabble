@@ -1,5 +1,6 @@
 class Word < TileGroup
     def initialize
+        super
     end
 
     def score

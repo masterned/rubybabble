@@ -7,6 +7,6 @@ class Word::TestInitialize < Minitest::Test
     end
 
     def test_create_empty_word
-
+        assert @word.tiles.empty?
     end
 end
