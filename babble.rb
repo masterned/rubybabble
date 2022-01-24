@@ -22,6 +22,11 @@ class Babble
             print 'Guess a word: '
             user_input = gets.chomp
             puts ''
+
+            if !(Spellchecker::check(user_input.downcase)[0][:correct])
+                puts "Not a valid word\n\n"
+                next
+            end
         end
 
         puts "Thanks for playing, total score: #{@total_score}"
