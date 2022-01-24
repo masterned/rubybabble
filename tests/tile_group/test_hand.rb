@@ -11,7 +11,8 @@ class TileGroup::TestHand < Minitest::Test
     end
 
     def test_convert_single_tile_group_to_string
-    
+        @tile_group.tiles = [:A]
+        assert_equal 'A', @tile_group.hand
     end
 
     def test_convert_multi_tile_group_to_string
