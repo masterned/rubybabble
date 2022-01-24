@@ -26,6 +26,12 @@ class TileRack::TestRemoveWord < Minitest::Test
     end
 
     def test_can_remove_word_with_duplicate_letters
+        @tile_rack.tiles = [:T, :C, :A, :T, :R, :E, :S]
+        
+        created_word = @tile_rack.remove_word 'SCATTER'
+        
+        assert_equal 'SCATTER', created_word.hand
+        assert_equal [], @tile_rack.tiles
     end
 
     def test_can_remove_word_without_removing_unneeded_duplicate_letters
