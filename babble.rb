@@ -23,7 +23,7 @@ class Babble
             user_input = gets.chomp
             puts ''
 
-            break if user_input == ":quit"
+            break if user_input.downcase == ":quit"
 
             if !(Spellchecker::check(user_input.downcase)[0][:correct])
                 puts "Not a valid word\n\n"
