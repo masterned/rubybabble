@@ -74,5 +74,6 @@ class TileBag
   end
 
   def self.points_for tile
+    @@tile_scores[tile]
   end
 end
