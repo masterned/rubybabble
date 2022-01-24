@@ -65,10 +65,11 @@ class TileBag
     @@tile_distribution.each do |letter, count|
       @tiles += Array.new(count, letter)
     end
+
+    @tiles.shuffle!
   end
 
   def draw_tile
-    tiles.shuffle!
     tiles.pop
   end
 
