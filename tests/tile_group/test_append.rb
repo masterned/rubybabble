@@ -7,7 +7,8 @@ class TestAppend < Minitest::Test
     end
 
     def test_append_one_tile
-
+        @tile_group.append :A
+        assert_equal [:A], @tile_group.tiles
     end
 
     def test_append_many_tiles
