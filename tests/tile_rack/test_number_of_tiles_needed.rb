@@ -21,5 +21,7 @@ class TileRack::TestNumberOfTilesNeeded < Minitest::Test
     end
 
     def test_that_full_tile_rack_doesnt_need_any_tiles
+        @tile_rack.tiles = [:S, :P, :E, :N, :C, :E, :R]
+        assert_equal 0, @tile_rack.number_of_tiles_needed
     end
 end
