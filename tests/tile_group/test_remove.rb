@@ -22,7 +22,10 @@ class TileGroup::TestRemove < Minitest::Test
     end
 
     def test_remove_last_tile_from_many
+        @tile_group.tiles = [:A, :B, :C]
+        @tile_group.remove :C
 
+        assert_equal [:A, :B], @tile_group.tiles
     end
 
     def test_remove_middle_tile_from_many
