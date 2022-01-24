@@ -27,6 +27,8 @@ class TileRack::TestHasTilesFor < Minitest::Test
     end
 
     def test_rack_contains_a_word_with_duplicate_letters
+        @tile_rack.tiles = [:H, :W, :O, :L, :L, :R, :E]
+        assert @tile_rack.has_tiles_for? 'HELLO'
     end
 
     def test_rack_doesnt_contain_enough_duplicate_letters
