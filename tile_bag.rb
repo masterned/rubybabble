@@ -68,9 +68,11 @@ class TileBag
   end
 
   def draw_tile
+    tiles.pop()
   end
 
   def empty?
+    tiles.empty?
   end
 
   def self.points_for tile
