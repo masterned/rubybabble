@@ -16,10 +16,11 @@ class TileGroup
         if tile_index != nil
             @tiles.delete_at tile_index
         end
-        
+
         self
     end
 
     def hand
+        tiles.join
     end
 end

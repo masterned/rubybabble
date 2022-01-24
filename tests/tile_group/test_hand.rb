@@ -7,7 +7,7 @@ class TileGroup::TestHand < Minitest::Test
     end
 
     def test_convert_empty_group_to_string
-
+        assert_equal '', @tile_group.hand
     end
 
     def test_convert_single_tile_group_to_string
