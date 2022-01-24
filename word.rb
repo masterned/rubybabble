@@ -4,5 +4,6 @@ class Word < TileGroup
     end
 
     def score
+        0
     end
 end
