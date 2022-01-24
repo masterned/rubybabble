@@ -1,3 +1,4 @@
+require_relative 'tile_group.rb'
 require_relative 'word.rb'
 
 class TileRack < TileGroup
