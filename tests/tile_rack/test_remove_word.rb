@@ -17,6 +17,12 @@ class TileRack::TestRemoveWord < Minitest::Test
     end
 
     def test_can_remove_a_word_whose_letters_are_not_in_order_on_the_rack
+        @tile_rack.tiles = [:G, :C, :A, :T, :R, :E, :P]
+        
+        created_word = @tile_rack.remove_word 'TRACE'
+        
+        assert_equal 'TRACE', created_word.hand
+        assert_equal [:G, :P], @tile_rack.tiles
     end
 
     def test_can_remove_word_with_duplicate_letters
