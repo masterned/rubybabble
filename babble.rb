@@ -27,6 +27,11 @@ class Babble
                 puts "Not a valid word\n\n"
                 next
             end
+
+            if !(@tile_rack.has_tiles_for? user_input.upcase)
+                puts "Not enough tiles\n\n"
+                next
+            end
         end
 
         puts "Thanks for playing, total score: #{@total_score}"
