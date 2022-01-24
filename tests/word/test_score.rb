@@ -11,7 +11,8 @@ class Word::TestScore < Minitest::Test
     end
 
     def test_score_a_one_tile_word
-
+        @word.tiles = [:A]
+        assert_equal 1, @word.score
     end
 
     def test_score_a_word_with_multiple_different_tiles
