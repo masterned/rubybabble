@@ -22,6 +22,8 @@ class TileRack::TestHasTilesFor < Minitest::Test
     end
 
     def test_rack_contains_some_but_not_all_needed_letters
+        @tile_rack.tiles = [:G, :C, :A, :T, :R, :E, :P]
+        assert !(@tile_rack.has_tiles_for? 'TREK')
     end
 
     def test_rack_contains_a_word_with_duplicate_letters
