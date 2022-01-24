@@ -12,6 +12,7 @@ class TileGroup
 
     def remove tile
         @tiles.delete_if {|group_tile| group_tile == tile}
+        self
     end
 
     def hand

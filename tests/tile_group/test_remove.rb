@@ -36,7 +36,10 @@ class TileGroup::TestRemove < Minitest::Test
     end
 
     def test_remove_multiple_tiles
+        @tile_group.tiles = [:A, :B, :C]
+        @tile_group.remove(:A).remove(:C)
 
+        assert_equal [:B], @tile_group.tiles
     end
 
     def test_make_sure_duplicates_are_not_removed
