@@ -16,7 +16,8 @@ class Word::TestScore < Minitest::Test
     end
 
     def test_score_a_word_with_multiple_different_tiles
-
+        @word.tiles = [:R, :U, :B, :Y]
+        assert_equal 9, @word.score
     end
 
     def test_score_a_word_with_recurring_tiles
