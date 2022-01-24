@@ -8,6 +8,12 @@ class TileRack::TestRemoveWord < Minitest::Test
     end
 
     def test_can_remove_a_word_whose_letters_are_in_order_on_the_rack
+        @tile_rack.tiles = [:G, :C, :A, :T, :R, :E, :P]
+        
+        created_word = @tile_rack.remove_word 'CAT'
+        
+        assert_equal 'CAT', created_word.hand
+        assert_equal [:G, :R, :E, :P], @tile_rack.tiles
     end
 
     def test_can_remove_a_word_whose_letters_are_not_in_order_on_the_rack
