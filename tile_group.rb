@@ -11,7 +11,12 @@ class TileGroup
     end
 
     def remove tile
-        @tiles.delete_if {|group_tile| group_tile == tile}
+        tile_index = @tiles.find_index tile
+
+        if tile_index != nil
+            @tiles.delete_at tile_index
+        end
+        
         self
     end
 
