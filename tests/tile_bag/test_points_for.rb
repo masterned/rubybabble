@@ -1,7 +1,7 @@
 require "minitest/autorun"
 require_relative "../../tile_bag.rb"
 
-class TestPointsFor < Minitest::Test
+class TileBag::TestPointsFor < Minitest::Test
   def test_confirm_point_values
     [:E, :A, :I, :O, :N, :R, :T, :L, :S, :U].each do |tile|
       assert_equal 1, TileBag.points_for(tile)

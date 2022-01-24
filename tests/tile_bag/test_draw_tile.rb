@@ -1,7 +1,7 @@
 require "minitest/autorun"
 require_relative "../../tile_bag.rb"
 
-class TestDrawTile < Minitest::Test
+class TileBag::TestDrawTile < Minitest::Test
   def setup
     @tile_bag = TileBag.new
   end

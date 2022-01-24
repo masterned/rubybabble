@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative '../../tile_group.rb'
 
-class TestAppend < Minitest::Test
+class TileGroup::TestAppend < Minitest::Test
     def setup
         @tile_group = TileGroup.new
     end
