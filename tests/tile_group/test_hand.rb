@@ -21,6 +21,7 @@ class TileGroup::TestHand < Minitest::Test
     end
 
     def test_convert_multi_tile_group_with_duplicates_to_string
-
+        @tile_group.tiles = Array.new(3, :A)
+        assert_equal 'AAA', @tile_group.hand
     end
 end
