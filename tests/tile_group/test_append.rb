@@ -19,6 +19,9 @@ class TestAppend < Minitest::Test
     end
 
     def test_append_duplicate_tiles
-
+        Array.new(3, :A).each do |tile|
+            @tile_group.append tile
+        end
+        assert_equal [:A, :A, :A], @tile_group.tiles
     end
 end
