@@ -7,6 +7,7 @@ class TileRack::TestNumberOfTilesNeeded < Minitest::Test
     end
 
     def test_empty_tile_rack_should_need_max_tiles
+        assert_equal 7, @tile_rack.number_of_tiles_needed
     end
 
     def test_tile_rack_with_one_tile_should_need_max_minus_one_tiles
